@@ -1,0 +1,63 @@
+html, body{
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+a.active {
+  background-color: gray;
+}
+
+html, body{
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+a.active {
+  background-color: gray;
+}
+
+
+span.active {
+  background-color: gray;
+}
+
+.home {
+  margin-top: 50px;
+}
+
+.home-liste {
+  padding-bottom : 5px;
+  padding-top : 5px;
+
+}
+
+.navbar {
+  margin-top: 0px;
+  background-color: #242424;
+}
+
+.navbar-brand {
+  background-color: transparent;
+}
+
+
+div#navbar a {
+  background-color: transparent;
+}
+
+div.mybandeau {
+  background-color: #f5f7fa;
+}
+
+div.bandeau {
+  display: flex;
+  width: 250px;
+  padding-left: 50px;
+  float: left;
+  height: 1000px;
+  background-color: #f5f7fa;
+}
+
+div.main {
+
+}

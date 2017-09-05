@@ -1,0 +1,15 @@
+<h4>Application service</h4>
+<div>
+<div class="component" [ngClass]="{'selected': serviceNum == 1}">
+  <a [routerLink]="['/service',1 ]" (click)="service(1)">Service 1</a><br>
+  <p>Once upon a time there were four little Rabbits, and their names were - Flopsy, Mopsy, Cotton-tail, and Peter.<p>
+</div>
+<div class="component" [ngClass]="{'selected': serviceNum == 2}">
+  <a [routerLink]="['/service',2 ]" (click)="service(2)">Service 2</a><br>
+  <p>Once upon a time there were four little Rabbits, and their names were - Flopsy, Mopsy, Cotton-tail, and Peter.<p>
+</div>
+  <div class="component" [ngClass]="{'selected': serviceNum == 3}">
+  <a [routerLink]="['/service',2 ]" (click)="service(3)">Service 3</a><br>
+  <p>Once upon a time there were four little Rabbits, and their names were - Flopsy, Mopsy, Cotton-tail, and Peter.<p>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+div.component {
+  padding: 4px;
+}
+
+div.component a {
+  font-weight: bold;
+}
+
+div.component p{
+  font-size: 12px;
+}
+
+div.selected {
+  padding: 4px;
+  background-color: #282530;
+  color: white;
+}
+
+
+div.selected a {
+  color: #E0E0E0;
+}

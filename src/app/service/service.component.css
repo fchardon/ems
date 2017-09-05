@@ -1,0 +1,65 @@
+div.service {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  height: 1000px;
+  color: white;
+  background-color: #282530;
+  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+div{
+  color: #CFD2DA;
+}
+
+div.container.menu {
+  margin-top:10px;
+}
+
+
+div.menu {
+   color: #1997C6;
+   padding-bottom: 5px;
+}
+
+div.menu.selected {
+  font-weight: bold;
+  border-bottom: #1997c5 2px solid;
+}
+
+div.group {
+  margin: 20px;
+}
+
+div.providers img{
+  width: 200px;
+}
+
+div.providers p {
+  font-size: 10px;
+}
+
+div.provider {
+  width: 200px;
+  height: 90px;
+  display: inline-block;
+  border: transparent solid 1px;
+}
+
+div.provider:hover {
+  background-color: #242424;
+  border: #1997C6 solid 1px;
+}
+
+
+div.style2 {
+  width: 200px;
+  height: 90px;
+  display: inline-block;
+  background-color: white;
+  border: #1997C6 solid 1px;
+  color: #242424;
+}
+
+

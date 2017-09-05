@@ -1,0 +1,149 @@
+<div class="service">
+<div class="container menu">
+  <div class="row">
+    <div class="col-md-3 menu" *ngIf="step1" [ngClass]="{'selected': selection =='configuration'}" (click)="selecteConfiguration()">Preparation</div>
+    <div class="col-md-3 menu" *ngIf="step2" [ngClass]="{'selected': selection =='status'}"(click)="selecteSatus()">Status</div>
+    <div class="col-md-3 menu" *ngIf="step3" [ngClass]="{'selected': selection =='other'}"(click)="selecteOther()">Configuration</div>
+    <div class="col-md-3 menu" *ngIf="step4" [ngClass]="{'selected': selection =='monitoring'}"(click)="selecteOther()">Monitoring</div>
+  </div>
+</div>
+
+<div *ngIf="selection =='configuration'">
+
+<h5>Service {{serviceNum}} Configuration</h5>
+
+<div class="container">
+
+<form>
+  <div class="group">
+    <div class="row">
+      <div class="col-md-12" >Enter Service Name</div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" ><input name="name" placeholder="Enter unique service name" [(ngModel)]="service.name" style="width: 100%"></div>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="row">
+      <div class="col-md-4" >Enter Bandwidth</div>
+      <div class="col-md-4" >Select start date</div>
+      <div class="col-md-4" >Select end date</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4" ><input name="bandwidth" placeholder="Enter a bandwidth" [(ngModel)]="service.bandwidth" style="width: 100%"></div>
+      <div class="col-md-4" ><input name="startDate" placeholder="Enter your service start date" [(ngModel)]="service.startdate" style="width: 100%"></div>
+      <div class="col-md-4" ><input name="endDate" placeholder="Enter your service end date" [(ngModel)]="service.enddate" style="width: 100%"></div>
+    </div>
+  </div>
+</form>
+
+</div>
+
+<h5>Choose your solution:</h5>
+  <div class="providers">
+    <div [className]="my_Class" (click)="select()"><span class="glyphicon glyphicon-star" ></span>
+      <br/>Basic Solution
+      <p>Once upon a time there were four little Rabbits, and their names were - Flopsy, Mopsy, Cotton-tail, and Peter.<p>
+    </div>
+    <div class="provider"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+      <br/>Advanced Solution
+      <p>Once upon a time there were four little Rabbits, and their names were - Flopsy, Mopsy, Cotton-tail, and Peter.<p>
+    </div>
+    <div class="provider"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+      <br/>Premium Solution
+      <p>Once upon a time there were four little Rabbits, and their names were - Flopsy, Mopsy, Cotton-tail, and Peter.<p>
+    </div>
+  </div>
+
+
+<ems-pricing *ngIf="isSelected"></ems-pricing>
+
+<div style="float: right; margin-top: 25px; margin-right: 10px;">
+
+  <button type="button" class="btn btn-default" aria-label="Left Align">
+    Cancel
+  </button>
+  <button [disabled]="!isSelected" type="button" class="btn btn-primary" aria-label="Left Align" (click)="createApplication()">
+    <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Create Application
+  </button>
+</div>
+
+
+
+</div>
+
+<div *ngIf="selection =='status'">
+  <h5>Environment Preparation</h5>
+
+  <div class="container">
+
+      <div class="group">
+        <div class="row">
+          <div class="col-md-3" >File Serveur configuration</div>
+          <div class="col-md-9" >
+              <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                100%
+              </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3" >Download confifiguration to provider</div>
+          <div class="col-md-9" >
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                100%
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3" >Provider system loading</div>
+          <div class="col-md-9" >
+            <div class="progress">
+              <div class="progress-bar active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                60%
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3" >Server stargin </div>
+          <div class="col-md-9" >
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                0%
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+
+  <div style="float: right; margin-top: 25px; margin-right: 10px;">
+
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+      Cancel
+    </button>
+    <button type="button" class="btn btn-primary" aria-label="Left Align" (click)="validateStepStatus()">
+      <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Next Step
+    </button>
+  </div>
+
+
+</div>
+
+<div *ngIf="selection =='other'">
+
+  <h5>System configuration</h5>
+
+</div>
+
+</div>
